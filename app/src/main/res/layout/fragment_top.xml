@@ -4,59 +4,64 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/topBar"
     android:layout_width="match_parent"
-    android:layout_height="500dp"
-    android:background="#000000"
+    android:layout_height="wrap_content"
     tools:context=".TopFragment">
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_width="0dp"
+        android:layout_height="98dp"
+        android:layout_marginTop="1dp"
+        android:background="#000000"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
             android:layout_weight="1"
-            android:text="TextView" />
+            android:text="LeaderBoard"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="#FFFFFF" />
 
         <Button
             android:id="@+id/button"
-
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:layout_weight="1"
-            android:background="#FFFFFF"
-            android:text="Button"
+            android:background="@drawable/rounded_btn"
+            android:text="Submit"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textColor="#000000" />
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="0dp"
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:background="#000000"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:tabIndicatorColor="#FFFFFF"
+        app:tabIndicatorHeight="3dp"
+        app:tabTextColor="#FFFFFF">
 
-        <Button
-            android:id="@+id/button2"
+        <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="#000000"
-            android:textColor="#FFFFFF"
-            android:text="Button" />
+            android:text="Monday" />
 
-        <Button
-            android:id="@+id/button3"
+        <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="#000000"
-            android:text="Button"
-            android:textColor="#FFFFFF" />
-    </LinearLayout>
+            android:text="Tuesday" />
+
+    </com.google.android.material.tabs.TabLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

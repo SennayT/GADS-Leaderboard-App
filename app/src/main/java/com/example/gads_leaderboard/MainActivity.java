@@ -10,6 +10,9 @@ import androidx.viewpager2.adapter.FragmentStateAdapter;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import com.google.android.material.tabs.TabLayout;
+import com.google.android.material.tabs.TabLayoutMediator;
+
 public class MainActivity extends AppCompatActivity {
     private static final int NUM_PAGES = 2;
     private ViewPager2 viewPager;
@@ -28,6 +31,16 @@ public class MainActivity extends AppCompatActivity {
 
         pagerAdapter = new ScreenSlidePageAdapter(this);
         viewPager.setAdapter(pagerAdapter);
+
+        final String[] names = {"Learning Leaders","Skill IQ Leaders"};
+
+        TabLayout tabs = findViewById(R.id.tabs);
+        new TabLayoutMediator(tabs, viewPager, new TabLayoutMediator.TabConfigurationStrategy() {
+            @Override
+            public void onConfigureTab(@NonNull TabLayout.Tab tab, int position) {
+                tab.setText(names[position]);
+            }
+        }).attach();
 
 
     }

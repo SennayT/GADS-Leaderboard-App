@@ -19,6 +19,7 @@ class HoursAdapter extends RecyclerView.Adapter<HoursAdapter.HourViewHolder> {
 
     public HoursAdapter() {
         hours = ApiUtil.getInstance().hours;
+        //
     }
 
 
