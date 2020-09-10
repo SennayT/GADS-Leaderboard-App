@@ -1,12 +1,17 @@
 package com.example.gads_leaderboard;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -60,5 +65,16 @@ public class TopFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_top, container, false);
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        Button btnSubmit = view.findViewById(R.id.btnSubmit);
+        btnSubmit.setOnClickListener(btn->{
+            Context context = view.getContext();
+            Intent intent = new Intent(context,SubmitActivity.class);
+            context.startActivity(intent);
+        });
     }
 }

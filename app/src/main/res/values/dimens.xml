@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="tvMarginSide">10dp</dimen>
+    <dimen name="tvMarginBetween">5dp</dimen>
+    <dimen name="edit_text_padding_top">5dp</dimen>
+    <dimen name="edit_text_padding_horizontal">3dp</dimen>
+</resources>
