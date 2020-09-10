@@ -45,6 +45,7 @@ class ApiUtil {
             public void onResponse(Call<List<Hour>> call, Response<List<Hour>> response) {
                 if(response.isSuccessful()) {
                     List<Hour> hourList = response.body();
+                    hours.clear();;
                     hours.addAll(hourList);
                 }
                 callback.onResponse(call,response);
@@ -69,6 +70,7 @@ class ApiUtil {
             public void onResponse(Call<List<SkillIq>> call, Response<List<SkillIq>> response) {
                 if(response.isSuccessful()) {
                     List<SkillIq> scoresList = response.body();
+                    scores.clear();
                     scores.addAll(scoresList);
                 }
                 callback.onResponse(call,response);
