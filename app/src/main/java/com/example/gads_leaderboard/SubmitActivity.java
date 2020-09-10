@@ -43,7 +43,7 @@ public class SubmitActivity extends AppCompatActivity {
 
         txtLink.setText(gitLink);
 
-        Button btnSubmit = findViewById(R.id.btnSubmit);
+        Button btnSubmit = findViewById(R.id.btnSubmitProj);
         mDialog = new Dialog(this);
         btnSubmit.setOnClickListener(btn->{
             mDialog.setContentView(R.layout.dialog_confirmation);
@@ -58,8 +58,10 @@ public class SubmitActivity extends AppCompatActivity {
 
     }
 
+
+
     private void submitApp() {
-        pbSubmit.setVisibility(View.VISIBLE);
+
                 Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(address)
                 .addConverterFactory(GsonConverterFactory.create())
@@ -76,9 +78,10 @@ public class SubmitActivity extends AppCompatActivity {
         submitCall.enqueue(new Callback<Void>() {
             @Override
             public void onResponse(Call<Void> call, Response<Void> response) {
-                pbSubmit.setVisibility(View.INVISIBLE);
+
                 if(response.isSuccessful()) {
                     mDialog.setContentView(R.layout.dialog_success);
+
                     Toast.makeText(SubmitActivity.this,"Project Was Submitted",Toast.LENGTH_LONG).show();
                 }
                 else{
@@ -89,7 +92,7 @@ public class SubmitActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<Void> call, Throwable t) {
-                pbSubmit.setVisibility(View.INVISIBLE);
+
                 Log.d("Response Message" , t.getMessage());
                 mDialog.setContentView(R.layout.dialog_error);
             }

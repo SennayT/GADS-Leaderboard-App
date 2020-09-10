@@ -1,2 +1,3 @@
 # GADS-Leaderboard-App
 Android app for showing the leader board int the Google Africa Leaders scholarship
+![Splash Screen](Screenshots/Screenshot_20200910-174741_GADS_LeaderBoard.jpg)![Learning Leaders Page](Screenshots/Screenshot_20200910-175044_GADS_LeaderBoard.jpg)![Skill Iq Leaders Page](Screenshots/Screenshot_20200910-175047_GADS_LeaderBoard.jpg)![Form Page](Screenshots/Screenshot_20200910-175050_GADS_LeaderBoard.jpg)![Confirmation Page](Screenshots/Screenshot_20200910-175053_GADS_LeaderBoard.jpg)![Error Message](Screenshots/Screenshot_20200910-192722_GADS_LeaderBoard.jpg)![Success Message](Screenshots/Screenshot_20200910-192812_GADS_LeaderBoard.jpg)
